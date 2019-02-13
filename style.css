@@ -4,6 +4,10 @@ font-family: 'Noto Sans', sans-serif;
 font-family: 'Merriweather', serif;
 */
 
+html {
+    scroll-behavior: smooth;
+  }
+
 body {
     color: #333;
     background-color: #eee;
@@ -28,25 +32,27 @@ body {
 h1 {
     text-transform: uppercase;
     font-size: 180%;
-    font-weight: 100;
+    font-weight: bold;
     text-decoration: none;
     padding-top: 20px;
+    color: #F26E3F;
 }
 
 #subtitle {
     color: #999;
+    font-size: 1em;
 }
 
 #site-title {
     /*background-color: red; initially for identification purposes*/
     margin: 30px;
-    border-top: 3px solid #333;
-    border-bottom: 3px solid #333;
+    border-top: 2px solid #333;
+    border-bottom: 2px solid #333;
 }
 
 #profile-photo {
     border-radius: 50%;
-    width: 60%;
+    width: 40%;
     padding-top: 20px;
 }
 
@@ -69,6 +75,30 @@ h1 {
     border: 1px solid #F26E3F;
 }
 
+.contact-link {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1em;
+}
+
+#contact {
+    margin: 30px;
+    padding-top: 10px;
+}
+
+#contact h2 {
+    /* border-top: 1px solid black; */
+    /* border-bottom: 1px solid black; */
+    margin: 10px;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+i {
+    font-size: 1.6em;
+    color: #F26E3F;
+}
+
 /* ======
    NAVBAR
    ====== */
@@ -89,13 +119,23 @@ nav {
 /* =========
    MAIN BODY
    ========= */
-#content {
-    background-color: white;
-    padding: 20px;
+section {
+    padding: 70px;
+    background-color:white;
 }
     
 main {
     margin-left: 300px; /* Same as the width of the sidenav */
-    margin-top: 30px;
+    margin-top: 45px;
     padding: 10px;
+}
+
+section#about {
+    background-color: #F26E3F;
+    color: white;
+}
+
+section#education    {
+    background-color: #F26E3F;
+    color: white;
 }
