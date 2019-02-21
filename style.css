@@ -157,7 +157,6 @@ section#education {
     background-color: inherit;
     width: 100%;
     background-color: white;
-    border-radius: 5px;
 }
 
 .timeline h2,
@@ -190,15 +189,57 @@ section h2 {
    PROJECTS
    ======== */
 
-.project-container {
-    display: flex;
+.projects-container {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    height: 100%;
 }
 
 .project-item {
-    width: 30%;
-    height: auto;
-    margin: 10px;
     background-color: #F26E3F;
+    position: relative;
+}
+
+.project-main {
+    grid-row: 1/3;
+    grid-column: 1/3;
+}
+
+.project-image {
+    position: relative;
+}
+
+.project-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0; 
+    padding: auto;
+    color: white;
+    background-color: black;
+    padding-left: 20px;
+    padding-right: 20px;
+    opacity: 0;
+    transition: 1s;
+    text-align: center;
+}
+
+.project-item:hover .project-overlay {
+    opacity: 0.7;
+}
+
+.project-content {
+    padding: 5%;
+}
+
+.project-secondary h2 {
+    font-size: 1em;
+}
+
+.project-secondary p {
+    font-size: 0.7em;
 }
 
 /* ========
