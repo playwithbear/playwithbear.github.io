@@ -126,7 +126,7 @@ nav {
    ========= */
 section {
     padding: 70px;
-    background-color:white;
+    background-color: white;
     color: black;
 
 }
@@ -134,11 +134,9 @@ section {
 main {
     margin-left: 300px; /* Same as the width of the sidenav */
     margin-top: 45px;
-    padding: 10px;
 }
 
-section#about,
-section#education {
+section:nth-child(odd) {
     background-color: #F26E3F;
 }
 
@@ -157,7 +155,6 @@ section#education {
     background-color: inherit;
     width: 100%;
     background-color: white;
-    border-radius: 5px;
 }
 
 .timeline h2,
@@ -186,19 +183,75 @@ section h2 {
     font-size: 2em;
 }
 
+.temp-center{
+    text-align: center;
+}
+
 /* ========
    PROJECTS
    ======== */
 
-.project-container {
-    display: flex;
+.projects-container {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    height: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
-.project-item {
-    width: 30%;
-    height: auto;
-    margin: 10px;
-    background-color: #F26E3F;
+.project-item { 
+    position: relative;
+}
+
+.project-main {
+    grid-row: 1/3;
+    grid-column: 1/3;
+}
+
+.project-bottom-right {
+    grid-column:3/5;
+    grid-row: 2/3;
+}
+
+.project-image {
+    position: relative;
+}
+
+.project-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0; 
+    padding: auto;
+    color: white;
+    background-color: black;
+    padding-left: 20px;
+    padding-right: 20px;
+    opacity: 0;
+    transition: 1s;
+    text-align: center;
+}
+
+.project-item:hover .project-overlay {
+    opacity: 0.7;
+}
+
+.project-item:hover img{
+    opacity: 0.3;
+}
+
+.project-content {
+    padding: 5%;
+}
+
+.project-secondary h2 {
+    font-size: 1em;
+}
+
+.project-secondary p {
+    font-size: 0.7em;
 }
 
 /* ========
